@@ -1,0 +1,80 @@
+<div class="container">
+    <form name="userForm">
+            <section class="center-text">
+                    <h2 class="cursive cursive-header pAHeader">
+                      <span>Register</span>
+                    </h2>
+                 
+                  </section>
+        <section ng-if="ctrl.section == 1" class="sectionReg extra-container">
+            <md-input-container>
+                <label>First Name</label>
+                <input name="firstName" ng-model="ctrl.model.FirstName" required type="text" ng-pattern="/^[a-zA-Z]+$/">
+            </md-input-container>
+            <md-input-container>
+                <label>Last Name</label>
+                <input name="lastName" ng-model="ctrl.model.LastName" required  type="text" ng-pattern="/^[a-zA-Z]+$/">
+            </md-input-container>
+            <md-input-container>
+                <label>Email</label>
+                <input name="email" ng-model="ctrl.model.Email" required  type="email">
+            </md-input-container>
+            <md-input-container>
+                <label>Password</label>
+                <input name="password" ng-model="ctrl.model.Password" ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/"
+                 required invalid type="password" >
+            </md-input-container>
+            <md-input-container>
+                <label>Confirm Password</label>
+                <input name="confirmPassword" ng-model="ctrl.model.confirmPassword" required 
+                ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/" type="password" >
+            </md-input-container>
+            <md-button type="submit" class="md-raised" ng-click="ctrl.moveSection(1)" >next</md-button>
+            <!-- <div ng-messages="userForm.firstName.$error" ng-show="ctrl.checkValid(1)">
+                    <div ng-message="required">firstName</div>
+            </div> -->
+        </section>
+        <section ng-if="ctrl.section == 2" class="sectionReg">
+            <md-input-container>
+                <label>Birthday</label>
+                <input name="birthday" ng-model="ctrl.model.Birthday" required type="date">
+            </md-input-container>
+            <md-input-container class="gender">
+                <label class="genderLable">Gender</label>
+                <md-radio-group name="gender" ng-model="ctrl.model.Gender">
+                    <md-radio-button value="1" class="md-primary">Male</md-radio-button>
+                    <md-radio-button value="0">Female</md-radio-button>
+                </md-radio-group>
+            </md-input-container>
+            <md-input-container>
+                <label>Height</label>
+                <input name="height" required ng-model="ctrl.model.Height" type="number">
+            </md-input-container>
+            <md-input-container>
+                <label>Weight</label>
+                <input name="meWeight" required ng-model="ctrl.model.Measurement.Weight" type="number">
+            </md-input-container>
+            <md-input-container>
+                <label>BodyFat</label>
+                <input name="meBodyFat"  required ng-model="ctrl.model.Measurement.BodyFat" type="number">
+            </md-input-container>
+            <md-button type="submit" class="md-raised" ng-click="ctrl.moveSection(2)" >next</md-button>
+        </section>
+        <section ng-if="ctrl.section == 3" class="sectionReg">
+          
+            <div class="center-text">
+                    <img class="weightGoal" src="css\images\front_icon_scales.png">
+            </div>
+            What is your weight goal?
+            <md-input-container>
+                <label>Weight</label>
+                <input name="goalWeight" ng-model="ctrl.model.Goal.GoalWeight" required type="number">
+            </md-input-container>
+            <md-input-container>
+                <label>BodyFat</label>
+                <input name="goalBodyFat" ng-model="ctrl.model.Goal.BodyFat" required type="number">
+            </md-input-container>
+            <md-button  type="submit" class="md-raised startMyJourneybtn" ng-click="ctrl.register()">GO!</md-button>
+        </section>
+    </form> 
+</div>

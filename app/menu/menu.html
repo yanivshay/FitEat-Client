@@ -1,0 +1,45 @@
+<div class="menuPage container">
+        <section class="center-text">
+                <h2 class="cursive cursive-header  pAHeader">
+                  <span>Menu</span>
+                </h2>
+             
+              </section>
+    <section class="middleSectionMenu  extra-container">
+        <div>
+            <h2 class="MenuName center-text">Menu {{ctrl.menuIndex +1}}</h2>
+            <md-progress-circular ng-show="ctrl.loader" md-diameter="80"></md-progress-circular>
+            <table class="menuTable" ng-show="!ctrl.loader"> 
+                <tr>
+                    <td>
+                        <h3>Breakfast</h3>
+                    </td>
+                </tr>
+                <tr ng-repeat="x in ctrl.selectedMenu.Breakfast">
+                    <td class="Menu-item">{{ x.Name + " (" + (x.Grams * x.Count) + " g.)" }}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Lunch</h3>
+                    </td>
+                </tr>
+                <tr ng-repeat="x in ctrl.selectedMenu.Lunch">
+                    <td class="Menu-item">{{ x.Name + " (" + (x.Grams * x.Count) + " g.)" }}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Dinner</h3>
+                    </td>
+                </tr>
+                <tr ng-repeat="x in ctrl.selectedMenu.Dinner">
+                    <td class="Menu-item">{{ x.Name + " (" + (x.Grams * x.Count) + " g.)" }}</td>
+                </tr>
+            </table>
+        </div>        
+        <br/>
+        <md-button class="md-raised" ng-click="ctrl.prevMenu()" ng-disabled="!(ctrl.menuIndex > 0) && ctrl.loader">Previous</md-button>
+        <md-button class="md-raised" ng-click="ctrl.editMenu()" ng-disabled="ctrl.loader">Choose</md-button>
+        <md-button class="md-raised" ng-click="ctrl.nextMenu()" ng-disabled="!(ctrl.menuIndex < 4) && ctrl.loader">Next</md-button>
+        <!-- <md-button class="md-raised" ng-click="ctrl.editMenu()">Edit</md-button> -->
+    </section>
+</div>

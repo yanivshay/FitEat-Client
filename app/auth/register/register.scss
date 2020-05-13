@@ -1,0 +1,59 @@
+  
+.divReg{
+    height: 50%;
+    width: 25%;
+    position: absolute;
+    right: 40%;
+    z-index: 0;
+}
+md-input-container.md-default-theme label, md-input-container label, md-input-container.md-default-theme .md-placeholder, md-input-container .md-placeholder{
+    color: rgba(115, 107, 107, 0.97);
+}
+
+.weightGoal{
+    top: 15%;
+    display: inline-block !important;
+
+    @media screen and (max-width: $wide){
+        width: 55%;
+        height: auto;
+    }
+    @media screen and (max-width: $wideToMedium){
+        width: 40%;
+        height: auto;
+    }
+    @media screen and (max-width: $medium){
+        width: 50%;
+        height: auto;
+    }
+    @media screen and (max-width: $small){
+        width: 70%;
+        height: auto;
+    }
+    @media screen and (max-width: $narrow){
+        width: 60%;
+        height: auto;
+    }
+    @media screen and (max-width: $smallest){
+        width: 75%;
+        height: auto;
+    }
+}
+
+.startMyJourneybtn{
+    width: 160px;
+}
+
+.genderLable{
+    margin-bottom: 42px;
+}
+.gender{
+    display: table-cell;
+}
+
+.sectionReg{
+    background: rgba(255,255,255,0.7);
+    padding: 20px;
+    position: relative;
+    border-radius: 4px;
+}

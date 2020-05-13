@@ -1,0 +1,109 @@
+<html >
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="icon" href="css\images\Logo.jpg" />
+        <title>FitEat</title>
+
+    </head>
+    
+    <body ng-app="personalTrainer" ng-controller="mainController">
+        <nav id="navbarMain" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+            
+            <a class="navbar-brand" href="#/">
+                <img src="css\images\Logo.jpg" class="logo-image">
+                <span class="logo">FitEat</span>
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto leftul" ng-show="hasLogged()">
+                    <li class="nav-item">
+                        <a class="nav-link" ng-href="#/updateweight">Update Weight</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-href="#/updategoal">Update Goal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-href="#/main">Personal Area</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-href="#/goalstats">Goal Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-href="#/progstats">Progress Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-click="editMenu()">View Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-click="createMenu()">Create Menu</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                            <a ng-show="!hasLogged()" class="nav-link" ng-href="#/login"> Login </a>
+                            <a class="nav-link" ng-show="hasLogged()" ng-click="logout()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main class="text-center">
+            <div>
+                <toaster-container toaster-options="{'time-out': 7000}"></toaster-container>
+    
+                <div class="view">
+                    <div class="full-bg-img">
+                        <div class="mask rgba-black-strong viewNg" ng-view></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" media="all" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animations.css"/>
+    <link rel="stylesheet" type="text/css" href="css/toaster.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+    
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $(".navbar-nav li a").click(function (event) {
+            $(".navbar-collapse").collapse('hide');
+        });
+    });
+
+    $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+            if ($(".navbar .show").length > 0) {
+                $(".navbar-collapse").removeClass("show");
+            }
+        });
+    });
+</script>
+
+</html>

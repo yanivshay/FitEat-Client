@@ -1,0 +1,27 @@
+<div class="container">
+                <section class="center-text">
+                        <h2 class="cursive cursive-header pAHeader">
+                          <span>Update Goal</span>
+                        </h2>
+                     
+                      </section>
+    <section class="sectionReg extra-container">
+            <div class="center-text">
+                    <img class="weightGoal" src="css\images\front_icon_scales.png">
+            </div>
+        What is your weight goal?
+       
+        <md-input-container>
+            <label>Weight</label>
+            <input name="goalWeight" ng-model="ctrl.GoalWeight" required type="number">
+        </md-input-container>
+        <md-input-container>
+            <label>BodyFat</label>
+            <input name="goalBodyFat" ng-model="ctrl.BodyFat" required type="number">
+        </md-input-container>
+        <div class="center-text">
+           <md-button  type="submit" class="md-raised startMyJourneybtn autoSize" ng-click="ctrl.update()">update</md-button>
+        </div>
+       
+    </section>
+</div>

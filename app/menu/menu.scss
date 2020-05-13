@@ -1,0 +1,42 @@
+.menuPage {
+    h1,h2,h3,h4,h5,h6 {
+        margin: 0;
+    }
+}
+
+.floatMenu {
+    background-color: white;
+    color: #757575;
+    border-radius: 25px;
+    padding: 20px;  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    td {
+        padding-bottom: 7.5px;
+    }
+}
+.md-select-value *:first-child
+{
+    color: black;
+}
+
+.Menu-item {
+    padding: 5px;
+}
+
+.middleSectionMenu{
+    background: rgba(255,255,255,0.7);
+    padding: 20px;
+    position: relative;
+    border-radius: 4px;
+}
+
+.menuTable {
+    width: 100%;
+    text-align: center;
+    color: #757575;
+    table-layout: fixed;
+}
+
+.MenuName{    
+    padding-bottom: 14px;
+}

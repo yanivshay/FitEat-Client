@@ -1,0 +1,51 @@
+.exceedAlert {
+    color: red;
+}
+
+.menuTable md-select {
+    margin: 2px 0 6px 0;
+    // max-width: 50%;
+}
+
+.boundaryLine td{
+    border-bottom-width: 2px;
+    border-radius: 25px;
+}
+
+md-progress-circular {
+    margin: auto;
+}
+
+.food-button{
+    border: none !important;
+    width: 30px;
+    min-width: 20px !important;
+}
+
+.md-select-value > span:not(.md-select-icon) {
+    padding-left: 32px;
+}
+
+.selectdemoSelectHeader {
+    /* Please note: All these selectors are only applied to children of elements with the 'selectdemoSelectHeader' class */ 
+}
+    .selectdemoSelectHeader .demo-header-searchbox {
+      border: none;
+      outline: none;
+      height: 100%;
+      width: 100%;
+      padding: 0; 
+    }
+    .selectdemoSelectHeader .demo-select-header {
+      box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12);
+      padding-left: 10.667px;
+      height: 48px;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: auto; 
+    }
+    .selectdemoSelectHeader md-content._md {
+      max-height: 240px; 
+    }

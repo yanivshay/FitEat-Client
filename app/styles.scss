@@ -1,0 +1,199 @@
+$smallest: 390px;
+$narrow: 570px;
+$small: 760px;
+$medium:960px;
+$wideToMedium:1280px;
+$wide: 1920px;
+$tomobile: 1059px;
+
+@import "auth/loggedOutMain/loggedOutMain.scss";
+@import "menu/menu.scss";
+@import "editMenu/editMenu.scss";
+@import "../node_modules/angular-material/angular-material.scss";
+@import "loggedInMain/loggedInMain.scss";
+//@import "external-scripts/animate.scss";
+@import "auth/register/register.scss";
+@import "update-weight/update-weight.scss";
+@import "landing/landing.scss";
+
+
+
+/*html, body{
+    background-image: url(../css/images/marble_background.png) !important;
+    background-position: 0;
+    background-size: 100%;
+}*/
+
+@font-face {
+    font-family: 'Cursive';
+    src:url('./fonts/cursivebeauty.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'SF';
+    src:url('./fonts/sf-pro-display_light.woff2') format('woff2');
+  }
+.backgroundLandscape{
+    background-image: url(../css/images/mt-1002-home-bg.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.view {
+    background: url(../css/images/back4.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.cursive{
+    font-family: 'Cursive', sans-serif;
+
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    font-family: 'SF', sans-serif;
+    //width: 100%;
+    //position: fixed;
+}
+.container{
+    width: 65%;
+    display: block;
+    margin: 0 auto;
+}
+.extra-container{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    @media screen and (max-width: $tomobile){
+        width: 75%;
+    }
+}
+md-input-container {
+    display: block;
+}
+.main-btn{
+    @media screen and (max-width: $wide){
+        font-size: 24px;
+        margin-top: -15px;
+    }
+    @media screen and (max-width: $wideToMedium){
+        font-size: 22px;
+        margin-top: 8px;
+    }
+    @media screen and (max-width: $medium){
+        font-size: 20px;
+        margin-top: 12px;
+    }
+    @media screen and (max-width: $small){
+        font-size: 18px;
+        margin-top: 16px;
+    }
+    @media screen and (max-width: $narrow){
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    @media screen and (max-width: $smallest){
+        font-size: 14px;
+        margin-top: 24px;
+    }
+
+    font-style: normal;
+    color: #ffffff;
+    background-color: #58c56f;
+    padding: 12px 40px;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid green;
+    font-family: 'Cursive';
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    display: inline-block;
+}
+.myCollapse{
+    display: none !important;
+}
+.main-btn:hover{
+    background-color: green;
+     border: 1px solid darkgreen;
+}
+.navbar {
+    background-color: black;
+}
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 35px !important;
+    color: white !important;
+    margin-left: 50px !important;
+}
+.logo-image{
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    margin: 0 6px;
+    min-width: 0;
+    line-height: 24px;
+    padding: 5px;
+    border-radius: 50%;
+}
+md-toolbar {
+    a {
+        margin-top: 10px !important;    
+        min-width: 0;        
+    }
+    section {
+        margin-left: 20px;        
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .backgroundLandscape {
+        background-color: lightblue;
+    }
+}
+
+.viewNg {
+    padding-top: 85px;
+}
+
+.view .full-bg-img, .view .mask {
+    overflow-y: overlay !important;
+}
+
+.leftul {
+    li{
+        border-right: 1px solid white;
+        padding: 0 10px;
+    }
+    li:last-child {
+        border:none;
+    }
+    
+}
+
+.nav-item {
+    a:hover{ 
+        color: yellow !important;
+        -webkit-transform: scale(1.2) !important;
+
+        @media screen and (max-width: $tomobile) {
+            font-size: 20px;
+            color: yellow !important;
+            -webkit-transform: none !important;
+        }
+    }
+}
+
+
+.autoSize {
+    width: 100%;
+    height: auto;
+}

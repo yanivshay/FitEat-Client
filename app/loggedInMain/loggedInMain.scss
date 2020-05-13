@@ -1,0 +1,82 @@
+.fixPlace{
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    top: 30%;
+    left: 40%;
+    margin-top: -9em;
+    margin-left: -15em;
+    text-align: center;
+}
+
+.pAHeader{
+    max-height: 70px;
+}
+
+.enterBtn{
+    width: 150px;
+}
+
+.personalDetailsItem {
+    padding: 10px;
+}
+
+.middleSection {
+    margin-top: 22px;
+    margin-bottom: 5px;
+    width: 100%;
+    background: rgba(255,255,255,0.7);
+    border-radius: 4px;
+}
+
+.divGraps{
+    height: 430px;
+    margin-top: 25px;
+    width: 100%;
+    background: rgba(255,255,255,0.7);
+    padding: 20px;
+    display: block;
+    position: relative;
+    border-radius: 4px;
+    @media screen and (max-width: $small){
+        height: 415px;
+    }
+    @media screen and (max-width: $narrow){
+        margin-top: -5px;
+        height: 490px;
+    }
+}
+
+.divDetails{
+    height: 35%;
+    margin-top: 25px;
+    width: 100%;
+    background: rgba(255,255,255,0.7);
+    padding: 20px;
+    display: block;
+    position: relative;
+    border-radius: 4px;
+    @media screen and (max-width: $small){
+        height: 45%;
+    }
+    @media screen and (max-width: $narrow){
+        margin-top: -5px;
+        height: 50%;
+    }
+}
+
+.divInDetails {
+    padding-top: 5%;
+}
+
+
+.grap{
+    @media screen and (max-width: $wide){
+        width: 100% !important;
+        height: 100% !important;
+    }
+    @media screen and (max-width: $narrow){
+        width: 100% !important;
+        height: 70% !important;
+    }
+}
