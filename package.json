@@ -24,7 +24,7 @@
     "bootstrap": "^4.1.1",
     "browserify": "^15.2.0",
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-angular-embed-templates": "^2.3.0",
     "gulp-compass": "^2.1.0",
     "gulp-concat": "^2.6.1",
